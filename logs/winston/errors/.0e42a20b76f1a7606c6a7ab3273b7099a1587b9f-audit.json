@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\apollo-next-level-web-development\\watch-shop\\university-management-auth-service\\logs\\winston\\errors\\.0e42a20b76f1a7606c6a7ab3273b7099a1587b9f-audit.json",
+    "files": [
+        {
+            "date": 1698301126834,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\university-management-auth-service\\logs\\winston\\errors\\phu-2023-26-10-12-error.log",
+            "hash": "ffd39cd33c7439932a78d9fa2b1c93e0309af727084ed06c9b74098327f97ae9"
+        }
+    ],
+    "hashType": "sha256"
+}
