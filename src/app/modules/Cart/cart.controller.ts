@@ -17,7 +17,18 @@ const insertIntoDb = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAllData = catchAsync(async (req: Request, res: Response) => {
-  const result = await CartService.getAllData(req.body);
+  const email = req.query.email as string; // Assuming email is a string
+  if (!email) {
+    // Handle the case where email is undefined or empty
+    sendResponse(res, {
+      statusCode: httpStatus.BAD_REQUEST,
+      success: false,
+      message: 'Email is required',
+    });
+    return;
+  }
+
+  const result = await CartService.getAllData({ email });
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -26,7 +37,6 @@ const getAllData = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
-
 const updatedData = catchAsync(async (req: Request, res: Response) => {
   const result = await CartService.updatedData(req.params.id, req.body);
 

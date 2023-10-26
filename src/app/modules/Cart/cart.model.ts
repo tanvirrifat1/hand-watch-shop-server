@@ -24,6 +24,7 @@ const cartItem = new Schema<ICart>(
     },
     email: {
       type: String,
+      required: true,
     },
   },
   {

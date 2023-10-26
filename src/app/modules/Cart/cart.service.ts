@@ -7,7 +7,8 @@ const interIntoDb = async (payload: ICart): Promise<ICart> => {
 };
 
 const getAllData = async (payload: ICart): Promise<ICart[]> => {
-  const result = await Cart.find(payload);
+  const result = await Cart.find({ email: payload.email });
+
   return result;
 };
 
