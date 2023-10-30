@@ -12,6 +12,16 @@ const getAllData = async (payload: ICart): Promise<ICart[]> => {
   return result;
 };
 
+const getSingleData = async (id: string): Promise<ICart | null> => {
+  const result = await Cart.findById(id);
+  return result;
+};
+
+const deleteData = async (id: string): Promise<ICart | null> => {
+  const result = await Cart.findByIdAndDelete(id);
+  return result;
+};
+
 const updatedData = async (
   id: string,
   payload: ICart
@@ -20,4 +30,10 @@ const updatedData = async (
   return result;
 };
 
-export const CartService = { interIntoDb, getAllData, updatedData };
+export const CartService = {
+  interIntoDb,
+  getAllData,
+  updatedData,
+  getSingleData,
+  deleteData,
+};

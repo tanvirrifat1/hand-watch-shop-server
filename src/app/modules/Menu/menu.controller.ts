@@ -38,8 +38,21 @@ const updatedData = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getSingleData = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await MenuService.getSingleData(id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'single menu fetched successfully',
+    data: result,
+  });
+});
+
 export const MenuController = {
   insertIntoDb,
   getAllData,
   updatedData,
+  getSingleData,
 };

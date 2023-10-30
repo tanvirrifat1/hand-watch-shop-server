@@ -11,6 +11,11 @@ const getAllData = async (payload: IMenu): Promise<IMenu[]> => {
   return result;
 };
 
+const getSingleData = async (id: string): Promise<IMenu | null> => {
+  const result = await Menu.findById(id);
+  return result;
+};
+
 const updatedData = async (
   id: string,
   payload: IMenu
@@ -19,4 +24,9 @@ const updatedData = async (
   return result;
 };
 
-export const MenuService = { interIntoDb, getAllData, updatedData };
+export const MenuService = {
+  interIntoDb,
+  getAllData,
+  updatedData,
+  getSingleData,
+};

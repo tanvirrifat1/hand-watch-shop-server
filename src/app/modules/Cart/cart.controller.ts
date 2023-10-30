@@ -37,6 +37,7 @@ const getAllData = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
+
 const updatedData = catchAsync(async (req: Request, res: Response) => {
   const result = await CartService.updatedData(req.params.id, req.body);
 
@@ -48,8 +49,32 @@ const updatedData = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getSingleData = catchAsync(async (req: Request, res: Response) => {
+  const result = await CartService.getSingleData(req.params.id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'cart single successfully',
+    data: result,
+  });
+});
+
+const deleteData = catchAsync(async (req: Request, res: Response) => {
+  const result = await CartService.deleteData(req.params.id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'cart deleted successfully',
+    data: result,
+  });
+});
+
 export const cartController = {
   insertIntoDb,
   getAllData,
   updatedData,
+  getSingleData,
+  deleteData,
 };
