@@ -15,6 +15,9 @@ const userItem = new Schema<IUser>(
       type: String,
       required: true,
     },
+    password: {
+      type: String,
+    },
   },
   {
     timestamps: true,
