@@ -17,7 +17,7 @@ const insertIntoDb = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAllData = catchAsync(async (req: Request, res: Response) => {
-  const result = await MenuService.getAllData(req.body);
+  const result = await MenuService.getAllData();
 
   sendResponse(res, {
     statusCode: httpStatus.OK,

@@ -6,13 +6,15 @@ const interIntoDb = async (payload: IMenu): Promise<IMenu> => {
   return result;
 };
 
-const getAllData = async (payload: IMenu): Promise<IMenu[]> => {
-  const result = await Menu.find(payload);
+const getAllData = async (): Promise<IMenu[]> => {
+  const result = await Menu.find();
   return result;
 };
 
-const getSingleData = async (id: string): Promise<IMenu | null> => {
+const getSingleData = async (id: string) => {
+  console.log(id);
   const result = await Menu.findById(id);
+  console.log(result);
   return result;
 };
 
