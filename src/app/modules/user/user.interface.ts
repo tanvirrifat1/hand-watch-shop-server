@@ -3,4 +3,5 @@ export type IUser = {
   image: string;
   email: string;
   password: string;
+  role?: string;
 };

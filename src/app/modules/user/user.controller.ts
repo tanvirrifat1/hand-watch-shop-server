@@ -16,4 +16,26 @@ const insertIntoDb = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-export const UserController = { insertIntoDb };
+const getAllData = catchAsync(async (req: Request, res: Response) => {
+  const result = await UserService.getAllData();
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'user fetched successfully',
+    data: result,
+  });
+});
+
+const updateData = catchAsync(async (req: Request, res: Response) => {
+  const result = await UserService.updateData(req.params.id, req.body);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'user updated successfully',
+    data: result,
+  });
+});
+
+export const UserController = { insertIntoDb, getAllData, updateData };

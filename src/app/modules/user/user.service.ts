@@ -15,4 +15,19 @@ const insertIntoDb = async (payload: ICart): Promise<IUser> => {
   return result;
 };
 
-export const UserService = { insertIntoDb };
+const getAllData = async (): Promise<IUser[]> => {
+  const result = await User.find();
+  return result;
+};
+
+const updateData = async (
+  id: string,
+  payload: Partial<IUser>
+): Promise<IUser | null> => {
+  const result = await User.findOneAndUpdate({ _id: id }, payload, {
+    new: true,
+  });
+  return result;
+};
+
+export const UserService = { insertIntoDb, getAllData, updateData };

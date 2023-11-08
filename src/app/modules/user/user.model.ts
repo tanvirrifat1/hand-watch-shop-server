@@ -18,6 +18,7 @@ const userItem = new Schema<IUser>(
     password: {
       type: String,
     },
+    role: { type: String, default: 'user' },
   },
   {
     timestamps: true,
