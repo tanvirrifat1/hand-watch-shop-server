@@ -94,6 +94,11 @@
             "date": 1699427022813,
             "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-08-11-13-error.log",
             "hash": "cd70fa047eec2e3b1c1b41c643485576940fa548ad8440b60df1c507ec6d6062"
+        },
+        {
+            "date": 1699430416551,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-08-11-14-error.log",
+            "hash": "30a69f59dc5d8c177038fd72e0c98d72df52d7f064d452f20cb70322398a4f33"
         }
     ],
     "hashType": "sha256"
