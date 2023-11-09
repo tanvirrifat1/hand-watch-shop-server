@@ -12,9 +12,7 @@ const SignInUser = catchAsync(async (req: Request, res: Response) => {
     statusCode: httpStatus.OK,
     success: true,
     message: 'user Login successfully',
-    data: {
-      accessToken: result.accessToken,
-    },
+    data: result.accessToken,
   });
 });
 

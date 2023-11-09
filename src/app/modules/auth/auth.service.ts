@@ -1,36 +1,33 @@
+import httpStatus from 'http-status';
+import { Secret } from 'jsonwebtoken';
+import config from '../../../config';
+import ApiError from '../../../errors/ApiError';
+import { jwtHelpers } from '../../../helpers/jwtHelpers';
 import { User } from '../user/user.model';
 import { ISignInData } from './auth.interface';
-// const jwt = require( 'jsonwebtoken' );
-
-import jwt from 'jsonwebtoken';
 
 const signInUser = async (payload: ISignInData) => {
-  const { email, password } = payload;
+  const { email } = payload;
 
   // Find the user by email
   const user = await User.findOne({ email });
-
   if (!user) {
-    throw new Error('User not found');
+    throw new ApiError(httpStatus.BAD_REQUEST, 'User not found');
   }
 
   // Compare the provided password with the stored hashed password
-  const isPasswordMatch = password === user.password;
+  //   const isPasswordMatch = name === user.name;
 
-  if (!isPasswordMatch) {
-    throw new Error('Password does not match');
-  }
+  //   if (!isPasswordMatch) {
+  //     throw new ApiError(httpStatus.BAD_REQUEST, 'user does not matched');
+  //   }
 
-  // Generate a JWT token
-  const token = jwt.sign(
-    { userId: user._id, role: user.role },
-    'yourSecretKey',
-    {
-      expiresIn: '1h', // Adjust the expiration time as needed
-    }
+  const accessToken = jwtHelpers.createToken(
+    { userEmail: user.email, role: user.role },
+    config.jwt.secret as Secret,
+    config.jwt.expires_in as string
   );
-
-  return { accessToken: token };
+  return { accessToken };
 };
 
 export const AuthService = {

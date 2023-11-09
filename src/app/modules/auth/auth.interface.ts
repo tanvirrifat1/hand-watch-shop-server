@@ -1,6 +1,6 @@
 export type ISignInData = {
   email?: string;
-  password?: string;
+  name?: string;
 };
 
 export type ISignInResponse = {
