@@ -11,7 +11,13 @@ const getAllData = async () => {
   return result;
 };
 
+const deleteData = async (id: string) => {
+  const result = await Reviews.findByIdAndDelete(id, { new: true });
+  return result;
+};
+
 export const ReviewsService = {
   interIntoDb,
+  deleteData,
   getAllData,
 };

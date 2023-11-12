@@ -6,16 +6,6 @@
     "auditLog": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\.fa114fa5514e715db56a6e72da1d6eb6954d1523-audit.json",
     "files": [
         {
-            "date": 1698478799397,
-            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-28-10-13-error.log",
-            "hash": "f9aa1f887755bb1c441f79ffeeccc9b64e1c091e70ba4a98b6b80241a47ede6f"
-        },
-        {
-            "date": 1698482518466,
-            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-28-10-14-error.log",
-            "hash": "f31a6344447f4b080f1adc91f0fc75d4bd8078da2106b3c11a5079412008f776"
-        },
-        {
             "date": 1698648164764,
             "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-30-10-12-error.log",
             "hash": "47c30575b3e9bbc0cdd6244823cbf98e5d5c90a064a71958eeb9c71513837ad1"
@@ -114,6 +104,61 @@
             "date": 1699512652616,
             "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-09-11-12-error.log",
             "hash": "c42e8f94d5d5cfcd445570308caa464ec3751a25c9fe8e276896c85a4a8a960c"
+        },
+        {
+            "date": 1699515095357,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-09-11-13-error.log",
+            "hash": "72215fbe80761c1264464edc42168e53be75a4c47df4793a4b1710075e5cfcdf"
+        },
+        {
+            "date": 1699517137301,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-09-11-14-error.log",
+            "hash": "ab22cb0af899eea5acd3598f48b20f53b37da12fad56815021fd559a902003b7"
+        },
+        {
+            "date": 1699520684247,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-09-11-15-error.log",
+            "hash": "4c5ab7a831e82c0bad32159f410f979beda7206115ebc9df647285e7fcd76e6c"
+        },
+        {
+            "date": 1699540030735,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-09-11-20-error.log",
+            "hash": "12d417c33ecfc59dc04bfda20cfe5b191169729284c7505f1748cec13477324f"
+        },
+        {
+            "date": 1699550677009,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-09-11-23-error.log",
+            "hash": "21a243cbe482ae0b0ce84f180c4ebe51b32e42000e90e30400388db91872bc02"
+        },
+        {
+            "date": 1699775450984,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-12-11-13-error.log",
+            "hash": "07348f6a2b03aaf6ebb86b641cd4b3257246785f5237f0819d7353cfeea19422"
+        },
+        {
+            "date": 1699791745094,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-12-11-18-error.log",
+            "hash": "2e4c31d0bf2a72698ceea67cfbd4e042eb6c38ba48fa5734c37a3127763c3e2f"
+        },
+        {
+            "date": 1699795363374,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-12-11-19-error.log",
+            "hash": "51297a0cfcce4c1d6ae5e5275e5be1e16a521155b9880fea4893a58814c02d20"
+        },
+        {
+            "date": 1699801027637,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-12-11-20-error.log",
+            "hash": "34504dddea90788235356d7e44e4aee014c6fe06913d6b75a167c574767d91c2"
+        },
+        {
+            "date": 1699812521443,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-13-11-00-error.log",
+            "hash": "b3c536fc80583c359abac2ff8f0856ad3a26a4c6d1b81968375740abe8775413"
+        },
+        {
+            "date": 1699816507210,
+            "name": "D:\\apollo-next-level-web-development\\watch-shop\\watch-shop-mongoose\\logs\\winston\\errors\\phu-2023-13-11-01-error.log",
+            "hash": "51207d2aa4a1dcfb554ef88e87d458e371777946a05bebabdbd805d601d69fa4"
         }
     ],
     "hashType": "sha256"

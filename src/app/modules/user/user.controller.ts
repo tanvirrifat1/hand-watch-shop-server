@@ -38,4 +38,20 @@ const updateData = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-export const UserController = { insertIntoDb, getAllData, updateData };
+const deleteData = catchAsync(async (req: Request, res: Response) => {
+  const result = await UserService.deleteData(req.params.id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'user delete successfully',
+    data: result,
+  });
+});
+
+export const UserController = {
+  insertIntoDb,
+  getAllData,
+  updateData,
+  deleteData,
+};

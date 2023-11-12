@@ -30,4 +30,9 @@ const updateData = async (
   return result;
 };
 
-export const UserService = { insertIntoDb, getAllData, updateData };
+const deleteData = async (id: string): Promise<IUser | null> => {
+  const result = await User.findByIdAndDelete({ _id: id }, { new: true });
+  return result;
+};
+
+export const UserService = { insertIntoDb, getAllData, updateData, deleteData };

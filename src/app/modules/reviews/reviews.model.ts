@@ -13,7 +13,6 @@ const reviews = new Schema<IReviews>(
     },
     image: {
       type: String,
-      required: true,
     },
     rating: {
       type: Number,

@@ -4,4 +4,5 @@ export type IMenu = {
   image: string;
   category: string;
   price: string;
+  status: string;
 };

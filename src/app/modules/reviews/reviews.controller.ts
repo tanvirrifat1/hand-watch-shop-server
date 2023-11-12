@@ -22,9 +22,20 @@ const getAllData = catchAsync(async (req: Request, res: Response) => {
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Menu fetched successfully',
+    message: 'review fetched successfully',
     data: result,
   });
 });
 
-export const ReviewsController = { insertIntoDb, getAllData };
+const deleteData = catchAsync(async (req: Request, res: Response) => {
+  const result = await ReviewsService.deleteData(req.params.id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'review delete successfully',
+    data: result,
+  });
+});
+
+export const ReviewsController = { insertIntoDb, getAllData, deleteData };

@@ -23,6 +23,10 @@ const menuItem = new Schema<IMenu>(
       type: String,
       required: true,
     },
+    status: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

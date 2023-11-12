@@ -12,9 +12,7 @@ const getAllData = async (): Promise<IMenu[]> => {
 };
 
 const getSingleData = async (id: string) => {
-  console.log(id);
   const result = await Menu.findById(id);
-  console.log(result);
   return result;
 };
 
@@ -22,7 +20,7 @@ const updatedData = async (
   id: string,
   payload: IMenu
 ): Promise<IMenu | null> => {
-  const result = await Menu.findByIdAndUpdate(id, payload);
+  const result = await Menu.findByIdAndUpdate(id, payload, { new: true });
   return result;
 };
 
