@@ -50,9 +50,22 @@ const getSingleData = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const deleteData = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await MenuService.deleteData(id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'menu deleted successfully',
+    data: result,
+  });
+});
+
 export const MenuController = {
   insertIntoDb,
   getAllData,
   updatedData,
   getSingleData,
+  deleteData,
 };

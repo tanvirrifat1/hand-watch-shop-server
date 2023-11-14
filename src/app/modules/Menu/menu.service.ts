@@ -24,9 +24,15 @@ const updatedData = async (
   return result;
 };
 
+const deleteData = async (id: string): Promise<IMenu | null> => {
+  const result = await Menu.findByIdAndRemove(id, { new: true });
+  return result;
+};
+
 export const MenuService = {
   interIntoDb,
   getAllData,
   updatedData,
   getSingleData,
+  deleteData,
 };
