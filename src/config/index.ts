@@ -20,6 +20,7 @@ export default {
   },
   redis: {
     url: process.env.REDIS_URL,
-    expires_in: process.env.REDIS_TOKEN_EXPIRES_IN
-  }
+    expires_in: process.env.REDIS_TOKEN_EXPIRES_IN,
+  },
+  stripe: process.env.PAYMENT_SECRET_KEY,
 };
