@@ -8,6 +8,11 @@ router.get(
   //   auth(ENUM_USER_ROLE.ADMIN),
   PaymentController.getAllDataTotal
 );
+router.get(
+  '/totalValueByUser',
+  //   auth(ENUM_USER_ROLE.ADMIN),
+  PaymentController.getAllDataTotalUSEr
+);
 
 router.post('/', PaymentController.insertIntoDb);
 

@@ -48,6 +48,17 @@ const updatedData = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getAllDataTotal = catchAsync(async (req: Request, res: Response) => {
+  const result = await CartService.getAllDataTotal();
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'cart fetched for total successfully',
+    data: result,
+  });
+});
+
 const getSingleData = catchAsync(async (req: Request, res: Response) => {
   const result = await CartService.getSingleData(req.params.id);
 
@@ -76,4 +87,5 @@ export const cartController = {
   updatedData,
   getSingleData,
   deleteData,
+  getAllDataTotal,
 };

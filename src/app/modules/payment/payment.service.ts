@@ -1,7 +1,8 @@
 import { Cart } from '../Cart/cart.model';
 import { Menu } from '../Menu/menu.model';
+import { Reviews } from '../reviews/reviews.model';
 import { User } from '../user/user.model';
-import { IStripe, PaymentData } from './payment.interface';
+import { IStripe } from './payment.interface';
 import { Payment } from './payment.model';
 
 const interIntoDb = async (payload: IStripe): Promise<IStripe> => {
@@ -9,11 +10,10 @@ const interIntoDb = async (payload: IStripe): Promise<IStripe> => {
   return result;
 };
 
-const getAllData = async (payload: IStripe): Promise<PaymentData> => {
+const getAllData = async (payload: IStripe) => {
   const result = await Payment.find({ email: payload.email });
-  const total = await Payment.countDocuments();
 
-  return { total, result };
+  return result;
 };
 
 const getAllDataTotal = async () => {
@@ -48,4 +48,42 @@ const getAllDataTotal = async () => {
   }
 };
 
-export const PaymentService = { interIntoDb, getAllData, getAllDataTotal };
+const getAllDataTotalUSEr = async () => {
+  const menu = await Menu.find();
+
+  const menuLength = menu.length;
+  const result = await Cart.aggregate([
+    {
+      $group: {
+        _id: '$email',
+        quantity: { $sum: 1 },
+      },
+    },
+  ]);
+  const result3 = await Reviews.aggregate([
+    {
+      $group: {
+        _id: '$email',
+        quantity: { $sum: 1 },
+      },
+    },
+  ]);
+
+  const result2 = await Payment.aggregate([
+    {
+      $group: {
+        _id: '$email',
+        quantity: { $sum: 1 },
+      },
+    },
+  ]);
+
+  return { result, result2, result3, menuLength };
+};
+
+export const PaymentService = {
+  interIntoDb,
+  getAllData,
+  getAllDataTotal,
+  getAllDataTotalUSEr,
+};

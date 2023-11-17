@@ -26,6 +26,17 @@ const getAllDataTotal = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getAllDataTotalUSEr = catchAsync(async (req: Request, res: Response) => {
+  const result = await PaymentService.getAllDataTotalUSEr();
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'get total user payment successfully',
+    data: result,
+  });
+});
+
 const getAllData = catchAsync(async (req: Request, res: Response) => {
   const email = req.query.email as string;
   if (!email) {
@@ -47,4 +58,9 @@ const getAllData = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-export const PaymentController = { insertIntoDb, getAllData, getAllDataTotal };
+export const PaymentController = {
+  insertIntoDb,
+  getAllData,
+  getAllDataTotal,
+  getAllDataTotalUSEr,
+};

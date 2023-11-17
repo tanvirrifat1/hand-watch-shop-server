@@ -5,6 +5,8 @@ import { cartController } from './cart.controller';
 
 const router = express.Router();
 
+router.get('/total', cartController.getAllDataTotal);
+
 router.post('/create-cart', cartController.insertIntoDb);
 router.get(
   '/:id',
@@ -12,6 +14,7 @@ router.get(
   cartController.getSingleData
 );
 router.delete('/:id', cartController.deleteData);
+
 router.get(
   '/',
   auth(ENUM_USER_ROLE.USER, ENUM_USER_ROLE.ADMIN),

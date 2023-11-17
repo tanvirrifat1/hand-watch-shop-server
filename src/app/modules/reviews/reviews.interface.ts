@@ -3,4 +3,5 @@ export type IReviews = {
   details: string;
   rating: number;
   image: string;
+  email: string;
 };

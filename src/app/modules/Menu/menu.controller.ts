@@ -27,6 +27,17 @@ const getAllData = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const updateAll = catchAsync(async (req: Request, res: Response) => {
+  const result = await MenuService.updateAll();
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Menu updated ALL successfully',
+    data: result,
+  });
+});
+
 const updatedData = catchAsync(async (req: Request, res: Response) => {
   const result = await MenuService.updatedData(req.params.id, req.body);
 
@@ -68,4 +79,5 @@ export const MenuController = {
   updatedData,
   getSingleData,
   deleteData,
+  updateAll,
 };

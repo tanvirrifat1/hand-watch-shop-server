@@ -24,6 +24,15 @@ const updatedData = async (
   return result;
 };
 
+const updateAll = async () => {
+  const result = await Menu.updateMany(
+    { name: 'TAG_Heuer' },
+    { name: 'TAGHeuer' },
+    { new: true }
+  );
+  return result;
+};
+
 const deleteData = async (id: string): Promise<IMenu | null> => {
   const result = await Menu.findByIdAndRemove(id, { new: true });
   return result;
@@ -35,4 +44,5 @@ export const MenuService = {
   updatedData,
   getSingleData,
   deleteData,
+  updateAll,
 };
