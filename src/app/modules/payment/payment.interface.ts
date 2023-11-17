@@ -1,6 +1,11 @@
 export type IStripe = {
-  name: string;
   email: string;
+  name?: string;
   stripeCustomerId?: string;
   price?: string;
+};
+
+export type PaymentData = {
+  total: number;
+  result: IStripe[];
 };

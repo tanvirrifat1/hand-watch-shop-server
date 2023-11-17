@@ -17,9 +17,8 @@ const insertIntoDb = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAllData = catchAsync(async (req: Request, res: Response) => {
-  const email = req.query.email as string; // Assuming email is a string
+  const email = req.query.email as string;
   if (!email) {
-    // Handle the case where email is undefined or empty
     sendResponse(res, {
       statusCode: httpStatus.BAD_REQUEST,
       success: false,
