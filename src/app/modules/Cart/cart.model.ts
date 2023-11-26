@@ -26,6 +26,10 @@ const cartItem = new Schema<ICart>(
       type: String,
       required: true,
     },
+    productId: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

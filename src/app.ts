@@ -7,7 +7,13 @@ import routes from './app/routes';
 
 const app: Application = express();
 
-app.use(cors());
+// app.use(cors());
+
+app.use(
+  cors({
+    origin: '*',
+  })
+);
 app.use(cookieParser());
 
 //parser
