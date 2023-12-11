@@ -5,7 +5,8 @@ import sendResponse from '../../../shared/sendResponse';
 import { ReviewsService } from './reviews.service';
 
 const insertIntoDb = catchAsync(async (req: Request, res: Response) => {
-  const { ...MenuItems } = req.body;
+  console.log(req.body);
+  const MenuItems = req.body;
   const result = await ReviewsService.interIntoDb(MenuItems);
 
   sendResponse(res, {

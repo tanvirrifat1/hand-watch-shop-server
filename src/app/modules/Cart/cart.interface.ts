@@ -5,5 +5,5 @@ export type ICart = {
   image?: string;
   category?: string;
   price?: string;
-  productId: string;
+  productId?: string;
 };

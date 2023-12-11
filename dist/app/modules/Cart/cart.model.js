@@ -26,6 +26,10 @@ const cartItem = new mongoose_1.Schema({
         type: String,
         required: true,
     },
+    productId: {
+        type: String,
+        required: true,
+    },
 }, {
     timestamps: true,
     toJSON: {

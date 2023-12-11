@@ -13,6 +13,8 @@ router.get('/', menu_controller_1.MenuController.getAllData);
 router.get('/:id', menu_controller_1.MenuController.getSingleData);
 router.patch('/allUpdate', menu_controller_1.MenuController.updateAll);
 router.patch('/:id', (0, auth_1.default)(user_1.ENUM_USER_ROLE.ADMIN), menu_controller_1.MenuController.updatedData);
-router.post('/create-menu', (0, auth_1.default)(user_1.ENUM_USER_ROLE.ADMIN), menu_controller_1.MenuController.insertIntoDb);
+router.post('/create-menu', 
+// auth(ENUM_USER_ROLE.ADMIN),
+menu_controller_1.MenuController.insertIntoDb);
 router.delete('/:id', (0, auth_1.default)(user_1.ENUM_USER_ROLE.ADMIN), menu_controller_1.MenuController.deleteData);
 exports.MenuRoutes = router;

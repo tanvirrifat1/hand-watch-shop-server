@@ -5,6 +5,5 @@ export type IMenu = {
   category: string;
   price: string;
   status: string;
-
   email: string;
 };

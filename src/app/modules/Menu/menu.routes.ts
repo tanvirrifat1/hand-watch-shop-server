@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', MenuController.getAllData);
 router.get('/:id', MenuController.getSingleData);
 router.patch('/allUpdate', MenuController.updateAll);
-router.patch('/:id', auth(ENUM_USER_ROLE.ADMIN), MenuController.updatedData);
+router.patch('/:id', MenuController.updatedData);
 router.post(
   '/create-menu',
   // auth(ENUM_USER_ROLE.ADMIN),

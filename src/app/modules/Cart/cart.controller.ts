@@ -5,8 +5,9 @@ import sendResponse from '../../../shared/sendResponse';
 import { CartService } from './cart.service';
 
 const insertIntoDb = catchAsync(async (req: Request, res: Response) => {
-  const { ...MenuItems } = req.body;
-  const result = await CartService.interIntoDb(MenuItems);
+  const menuItems = req.body;
+
+  const result = await CartService.interIntoDb(menuItems);
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
